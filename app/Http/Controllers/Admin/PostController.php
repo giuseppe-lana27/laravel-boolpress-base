@@ -10,13 +10,11 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-
     protected $validation = [
         'date' => 'required|date',
         'content' => 'required|string',
         'image' => 'nullable|url'
     ];
-
 
     /**
      * Display a listing of the resource.
@@ -26,7 +24,6 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        dd($posts);
         
         return view('admin.posts.index', compact('posts'));
     }
@@ -38,7 +35,6 @@ class PostController extends Controller
      */
     public function create()
     {
-        
         $tags = Tag::all();
 
         return view('admin.posts.create', compact('tags'));
