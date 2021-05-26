@@ -23,7 +23,10 @@ class CommentsTableSeeder extends Seeder
             for( $i = 0; $i < rand(0, 3); $i++){
                 $newComment = new Comment();
                 $newComment->post_id = $post->id;
-                $newComment->name = $faker->name();
+                // caso di colonna nullable
+                if(rand(0,1)){
+                    $newComment->name = $faker->name();
+                }
                 $newComment->content = $faker->text();
                 $newComment->save();
             }
