@@ -18,5 +18,6 @@ Route::get('posts/{slug}', 'BlogController@show')->name('guest.posts.show');
 Route::post('posts/{post}/add-comment', 'BlogController@addComment')->name('guest.posts.add-comment');
 
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function () {
-    Route::resource('posts', 'PostController');   
+    Route::resource('posts', 'PostController');
+    Route::delete('comments/{comment}', 'CommentController@destroy')->name('comment.destroy');
 });
