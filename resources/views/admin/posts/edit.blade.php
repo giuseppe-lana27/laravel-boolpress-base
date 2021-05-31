@@ -33,7 +33,7 @@
 	</div>
 	<div class="form-group">
 		<label for="image">Immagine</label>
-		{{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image" value="{{$post->image}}"> --}}
+		<img src="{{asset('storage/' . $post->image)}}" alt="" width="100">
 		<input type="file" class="form-control" id="image" name="image">
 
 	</div>
