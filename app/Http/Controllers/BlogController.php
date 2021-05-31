@@ -91,8 +91,6 @@ class BlogController extends Controller
         $newComment->save();
 
         return back();
-
-
     }
 
     /**

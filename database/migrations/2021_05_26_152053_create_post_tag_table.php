@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePostTagTable extends Migration
 {
-    /**
+    /**                                              
      * Run the migrations.
      *
      * @return void
